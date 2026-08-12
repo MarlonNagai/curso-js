@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio-09</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Seu país é <input type="text" name="pais" id="txtpaises">
+    <input type="button" value="verificar" onclick="descobrir()">
+    <div id="res"> 
+
+    </div>
+    <script>
+        function descobrir() {
+            var nac = window.document.querySelector('input#txtpaises')
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>O seu país é: ${nac.value}</p>`
+            if (nac.value == 'brasil') {
+                res.innerHTML += 'Você é brasileiro'
+            } else
+                res.innerHTML += 'Você é estrangeiro'
+        }
+        
+    </script>
+</body>
+</html>
